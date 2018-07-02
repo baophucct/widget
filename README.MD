@@ -4,6 +4,8 @@ The ERC dEX Trade Widget provides an easy way to offer users access to token liq
 
 [Live Demo](https://ercdex.github.io/widget/)
 
+[Demo Source Code](https://github.com/ERCdEX/widget/blob/master/docs/index.html)
+
 # Setup
 
 ### Insert script in website and initialize Widget
@@ -15,6 +17,11 @@ The ERC dEX Trade Widget provides an easy way to offer users access to token liq
     // ...options
   });
 </script>
+```
+
+### Launch widget from any click handler
+```
+ErcDexTradeWidget.launch();
 ```
 
 ### Initialization Options
