@@ -1,8 +1,15 @@
 interface IErcDexTradeWidgetParams {
-  mode?: 'widget';
+  // currently only sidebar mode supported
+  // default: 'sidebar'
+  mode?: 'sidebar';
+  // 'dark' is 'night' theme, 'light' is 'day' theme
+  // default: 'dark'
   theme?: 'dark' | 'light'
+  // optional: array of token symbols supported as base tokens
   baseTokens?: string[];
+  // optional: array of token symbols supported as quote tokens
   quoteTokens?: string[];
+  // devonly: point to alternative host
   baseUrl?: string;
 }
 
@@ -36,7 +43,7 @@ namespace ErcDexTradeWidget {
   export const initialize = (params: IErcDexTradeWidgetParams) => {
     _params = params;
     if (!params.mode) {
-      _params.mode = 'widget';
+      _params.mode = 'sidebar';
     }
 
     if (!_params.theme) {
@@ -46,7 +53,7 @@ namespace ErcDexTradeWidget {
 
   export const launch = () => {
     const { mode } = getParams();
-    if (mode === 'widget') {
+    if (mode === 'sidebar') {
       launchWidget();
     }
   };

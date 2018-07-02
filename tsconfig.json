@@ -3,7 +3,7 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "dist"
+    "outDir": "docs"
   },
   "include": [
     "src/**/*.ts"
