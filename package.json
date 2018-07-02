@@ -11,7 +11,7 @@
     "typescript": "^2.9.2"
   },
   "scripts": {
-    "start:frombutton": "tsc --outDir tests && static tests -p 61888 -i from-button.html",
+    "start": "tsc --outDir docs && static docs -p 61888 -i index.html",
     "build": "tsc"
   }
 }

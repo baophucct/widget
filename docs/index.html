@@ -8,15 +8,31 @@
     </title>
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+    <style>
+      body { font-family: 'Roboto', sans-serif; }
+      h1 { font-weight: 100; }
+    </style>
   </head>
 
   <body>
     <script src="./widget.js"></script>
     <script>
-      ErcDexTradeWidget.initialize({});
+      function launchDark() {
+        ErcDexTradeWidget.initialize({});
+        ErcDexTradeWidget.launch();
+      }
+
+      function launchLight() {
+        ErcDexTradeWidget.initialize({
+          theme: 'light'
+        });
+        ErcDexTradeWidget.launch();
+      }
     </script>
 
     <h1>ERC dEX Trade Widget Demo</h1>
-    <button onclick="ErcDexTradeWidget.launch()">Click to launch</button>
+    <button onclick="launchDark()">Launch w/ dark theme</button>
+    <button onclick="launchLight()">Launch w/ light theme</button>
   </body>
 </html>
